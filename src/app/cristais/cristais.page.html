@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>cristais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-searchbar mode="ios" animated="true" placeholder="Buscar Produtos"></ion-searchbar>
+
+  <ion-item lines="full" *ngFor="let produto of listaProdutos">
+    <ion-thumbnail slot="start">
+      <img src="https://th.bing.com/th/id/OIP.--gqn9AJhoRmcG4jrYHPdAHaE8?pid=ImgDet&rs=1" />
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{produto.nome}}</h2>
+      <p>{{produto.descricao}}</p>
+    </ion-label>
+
+    <ion-badge color="dark">R$ {{produto.valor.toFixed(2)}}</ion-badge>
+
+    <ion-button slot="end" expand="block">
+      <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>promoções</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar mode="ios" animated="true" placeholder="Buscar Produtos"></ion-searchbar>
+
+  <ion-list>
+
+    <ion-item lines="full">
+      <ion-thumbnail slot="start">
+        <img src="https://th.bing.com/th/id/OIP.--gqn9AJhoRmcG4jrYHPdAHaE8?pid=ImgDet&rs=1" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Vela de Lavanda</h2>
+        <p>10cm - redonda</p>
+      </ion-label>
+
+      <ion-badge color="dark">R$ 15,00</ion-badge>
+
+      <ion-button slot="end" expand="block" >
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-thumbnail slot="start">
+        <img src="https://th.bing.com/th/id/OIP.--gqn9AJhoRmcG4jrYHPdAHaE8?pid=ImgDet&rs=1" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Vela de Rosas</h2>
+        <p>10cm - redonda</p>
+      </ion-label>
+
+      <ion-badge color="dark">R$ 15,00</ion-badge>
+
+      <ion-button slot="end" expand="block" >
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

@@ -11,6 +11,27 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'ofertas',
+    loadChildren: () => import('./promocoes/promocoes.module').then( m => m.PromocoesPageModule)
+  },
+  {
+    path: 'velas-aromaticas',
+    loadChildren: () => import('./velas-aromaticas/velas-aromaticas.module').then( m => m.VelasAromaticasPageModule)
+  },
+  {
+    path: 'cristais',
+    loadChildren: () => import('./cristais/cristais.module').then( m => m.CristaisPageModule)
+  },
+  {
+    path: 'mandalas',
+    loadChildren: () => import('./mandalas/mandalas.module').then( m => m.MandalasPageModule)
+  },
+  {
+    path: 'pulseiras',
+    loadChildren: () => import('./pulseiras/pulseiras.module').then( m => m.PulseirasPageModule)
+  },
+
 ];
 
 @NgModule({
