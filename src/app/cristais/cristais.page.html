@@ -17,13 +17,13 @@
       <img src="https://th.bing.com/th/id/OIP.--gqn9AJhoRmcG4jrYHPdAHaE8?pid=ImgDet&rs=1" />
     </ion-thumbnail>
     <ion-label>
-      <h2>{{produto.nome}}</h2>
+      <h2>{{produto.nome | uppercase}}</h2>
       <p>{{produto.descricao}}</p>
     </ion-label>
 
-    <ion-badge color="dark">R$ {{produto.valor.toFixed(2)}}</ion-badge>
+    <ion-badge color="dark">R$ {{produto.valor | number:'1.2-2'}}</ion-badge>
 
-    <ion-button slot="end" expand="block">
+    <ion-button slot="end" expand="block" (click)="addProdutoCarrinho(produto)">
       <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
     </ion-button>
   </ion-item>

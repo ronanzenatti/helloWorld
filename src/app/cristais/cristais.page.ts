@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BdtempService } from '../services/bdtemp.service';
 
 @Component({
   selector: 'app-cristais',
@@ -11,7 +12,7 @@ export class CristaisPage implements OnInit {
     {
       nome: "Cristal rosa",
       descricao: "10cm - quadrado",
-      valor: 35
+      valor: 6535.554
     },
     {
       nome: "Cristal azul",
@@ -26,9 +27,13 @@ export class CristaisPage implements OnInit {
 
   ];
 
-  constructor() { }
+  constructor(public bdtemp: BdtempService) { }
 
   ngOnInit() {
+  }
+
+  addProdutoCarrinho(produto: any){
+    this.bdtemp.addProdutoCarrinho(produto);
   }
 
 }
