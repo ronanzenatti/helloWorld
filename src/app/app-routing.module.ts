@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'pulseiras',
     loadChildren: () => import('./pulseiras/pulseiras.module').then( m => m.PulseirasPageModule)
+  },  {
+    path: 'carrinho',
+    loadChildren: () => import('./carrinho/carrinho.module').then( m => m.CarrinhoPageModule)
   },
+
 
 ];
 
